@@ -9,7 +9,7 @@ const HOST = "0.0.0.0";
 // App
 const app = express();
 app.get("/", (req, res) => {
-  res.send("Ildiko Makra Server v0.2");
+  res.send("Ildiko Makra Server v0.3");
 });
 
 app.listen(PORT, HOST, () => {
