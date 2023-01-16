@@ -1,0 +1,43 @@
+# Build docker image - start docker daemon first
+
+docker build . -t <your username>/node-web-app
+
+# Check for built images
+
+docker images
+
+# Run the image
+
+docker run -p 49160:8080 -d <your username>/node-web-app
+
+# Get the container ID
+
+docker ps
+
+# Print app output
+
+docker logs <containerID>
+
+# Example
+
+Running on http://localhost:8080
+
+# Go inside container
+
+docker exec -it <container id> bash
+
+# Testing
+
+docker ps
+>> PORTS 49160->8080
+
+curl -i localhost:49160
+
+# Kill the running container
+
+docker kill <containerID>
+
+# Confirm that the app has stopped
+
+curl -i localhost:49160
+
